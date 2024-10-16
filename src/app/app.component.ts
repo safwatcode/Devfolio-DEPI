@@ -6,45 +6,24 @@ import {
   QueryList,
 } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { LandingComponent } from './components/landing/landing.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
+import { TopbarComponent } from "./components/topbar/topbar.component";
+import { HeroComponent } from "./components/hero/hero.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, LandingComponent, NavbarComponent],
+  imports: [RouterOutlet, TopbarComponent, HeroComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
+  template: `
+
+  `,
 })
 export class AppComponent implements AfterViewInit {
   title = 'Portfolio';
   // Get current year
   currentYear: number = new Date().getFullYear();
 
-  constructor() {
-    this.initializeTheme();
-  }
-
-  initializeTheme(): void {
-    const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const savedTheme = sessionStorage.getItem('theme');
-
-    if (savedTheme) {
-      document.documentElement.setAttribute('data-theme', savedTheme);
-    } else {
-      document.documentElement.setAttribute(
-        'data-theme',
-        isDark ? 'dark' : 'light'
-      );
-    }
-  }
-
-  toggleTheme(): void {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-    document.documentElement.setAttribute('data-theme', newTheme);
-    sessionStorage.setItem('theme', newTheme);
-  }
   @ViewChildren('tabBtn') tabBtns!: QueryList<ElementRef>;
   @ViewChildren('tabContent') tabContents!: QueryList<ElementRef>;
 

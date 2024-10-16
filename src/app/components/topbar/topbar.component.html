@@ -1,0 +1,13 @@
+<header class="topbar">
+  <a href="/" class="logo">
+    <img src="images/Logo_dark.png" alt="Devfolio" width="155" height="32" class="dark" />
+    <img src="images/Logo_light.png" alt="Devfolio" width="155" height="32" class="light" />
+  </a>
+
+  <!-- Theme toggle button -->
+  <button class="icon-btn theme-btn" (click)="toggleTheme()"> <!-- Angular event binding for theme switch -->
+    <span class="material-symbols-outlined dark" aria-hidden="true">dark_mode</span>
+    <span class="material-symbols-outlined light" aria-hidden="true">light_mode</span>
+    <div class="state-layer"></div>
+  </button>
+</header>
