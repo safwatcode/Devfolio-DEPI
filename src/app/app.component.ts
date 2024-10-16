@@ -8,11 +8,12 @@ import {
 import { RouterOutlet } from '@angular/router';
 import { TopbarComponent } from "./components/topbar/topbar.component";
 import { HeroComponent } from "./components/hero/hero.component";
+import { FooterComponent } from "./components/footer/footer.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, TopbarComponent, HeroComponent],
+  imports: [RouterOutlet, TopbarComponent, HeroComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   template: `
@@ -21,8 +22,6 @@ import { HeroComponent } from "./components/hero/hero.component";
 })
 export class AppComponent implements AfterViewInit {
   title = 'Portfolio';
-  // Get current year
-  currentYear: number = new Date().getFullYear();
 
   @ViewChildren('tabBtn') tabBtns!: QueryList<ElementRef>;
   @ViewChildren('tabContent') tabContents!: QueryList<ElementRef>;
