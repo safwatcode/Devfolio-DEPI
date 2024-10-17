@@ -1,0 +1,13 @@
+<section class="section" data-tab-content="project">
+  <div class="project-list">
+    <div class="card" *ngFor="let project of projects">
+      <figure class="card-banner imgholder" style="--width: 334; --height: 180">
+        <img [src]="project.image" [alt]="project.title" class="img-cover" />
+      </figure>
+      <div class="card-content">
+        <span class="label-lg card-subtitle">{{ project.subtitle }}</span>
+        <h3 class="title-lg card-title">{{ project.title }}</h3>
+      </div>
+    </div>
+  </div>
+</section>
