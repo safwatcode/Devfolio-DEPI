@@ -9,17 +9,32 @@ import { Component } from '@angular/core';
   // styleUrl: './tabs.component.css'
   template: `
     <div class="primary-tabs">
-      <a routerLink="projects" routerLinkActive="active" class="tab-btn active" data-tab-btn="project">
+      <a
+        routerLink="projects"
+        routerLinkActive="active"
+        class="tab-btn active"
+        data-tab-btn="project"
+      >
         <span class="tab-text title-small">Projects</span>
         <div class="state-layer"></div>
       </a>
 
-      <a routerLink="resume" routerLinkActive="active" class="tab-btn" data-tab-btn="resume">
+      <a
+        routerLink="resume"
+        routerLinkActive="active"
+        class="tab-btn"
+        data-tab-btn="resume"
+      >
         <span class="tab-text title-small">Resume</span>
         <div class="state-layer"></div>
       </a>
 
-      <a routerLink="contact" routerLinkActive="active" class="tab-btn" data-tab-btn="contact">
+      <a
+        routerLink="contact"
+        routerLinkActive="active"
+        class="tab-btn"
+        data-tab-btn="contact"
+      >
         <span class="tab-text title-small">Contact</span>
         <div class="state-layer"></div>
       </a>
