@@ -161,7 +161,9 @@ textarea {
   border: none;
   font: inherit;
 }
-
+ol , ul {
+  padding-left: 0;
+}
 input,
 textarea {
   width: 100%;
@@ -757,6 +759,12 @@ body {
 }
 .year {
   display: inline-block;
+}
+
+/* Contact form Validation */
+.form-invalid {
+  display: block;
+  color: red;
 }
 
 /*-----------------------------------*\

@@ -25,7 +25,7 @@ import { Component } from '@angular/core';
         class="tab-btn"
         data-tab-btn="resume"
       >
-        <span class="tab-text title-small">Resume</span>
+        <span class="tab-text title-small">Skills</span>
         <div class="state-layer"></div>
       </a>
 
